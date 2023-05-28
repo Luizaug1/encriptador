@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport"content="width=device-width">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
+        <title>Encriptador</title>
+    </head>
+    <body>
+        <header>
+            <img class="logoAlura" src="imagens/logoAlura.png" alt="Logo da Alura">
+        </header>
+
+        <main>
+            <section>
+                <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
+    
+                <div class="informacao">
+                    <h6>Apenas letras minúsculas e sem acento.</h6>
+                </div>
+    
+                <div class="botoes">
+                    <button class="btn-encriptar" onclick="btnEncriptar()" onclick="limpar()" >Criptografar</button>
+                    <button class="btn-desencriptar" onclick="btnDesencriptar()" onclick="verificarResposta2()" >Descriptografar</button>
+                </div>
+            </section>
+    
+            <section>
+                <textarea class="mensagem" cols="20" rows="10"></textarea>
+                <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+            </section>
+    
+    
+        </main>
+        <script src="script.js"></script>
+
+<footer>
+    <div class="rodape">
+        <h1>Luiz Augusto Miranda de Lima</h1>
+        <a href="https://www.linkedin.com/in/luiz-augusto-449a96270/" alt="link para o linkedin">Linkedin</a>
+    </div>
+</footer>
+</body>
+</html>
