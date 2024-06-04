@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport"content="width=device-width">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="reset.css">
-        <title>Encriptador</title>
-    </head>
-    <body>
-        <header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
             <img class="logoAlura" src="imagens/logoAlura.png" alt="Logo da Alura">
-        </header>
+            <h1 class="titulo">Encriptador</h1>
+    </header>
 
-        <main>
-            <section>
-                <textarea class="text-area" cols="41" rows="4" placeholder="Digite seu texto"></textarea>
-    
+    <main>
+        <section id="panel-encriptar" class="panel">
+            <form id="formEncriptar" class="form">
+                <div class="form-group">
+                    <label for="texto">Texto a ser encriptado:</label>
+                    <textarea id="texto" class="texto" name="texto" rows="4" cols="50"></textarea>
+                </div>
                 <div class="informacao">
-                    <h6>Apenas letras minúsculas e sem acento.</h6>
+                    <p>Apenas letras minúsculas e sem acento.</p>
                 </div>
-    
                 <div class="botoes">
-                    <button class="btn-encriptar" onclick="btnEncriptar()" onclick="limpar()" >Criptografar</button>
-                    <button class="btn-desencriptar" onclick="btnDesencriptar()" onclick="verificarResposta2()" >Descriptografar</button>
+                    <button id="btnEncriptar" class="btn btn-encriptar" type="button">Encriptar</button>
+                    <button id="btnDesencriptar" class="btn btn-desencriptar" type="button">Descriptografar</button>
                 </div>
-            </section>
-    
-            <section>
-                <textarea class="mensagem" cols="20" rows="10"></textarea>
-                <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
-            </section>
-    
-    
-        </main>
-        <script src="script.js"></script>
+            </form>
+        </section>
 
-<footer>
-    <div class="rodape">
-        <h1>Luiz Augusto Miranda de Lima</h1>
-        <a href="https://www.linkedin.com/in/luiz-augusto-449a96270/" alt="link para o linkedin">Linkedin</a>
-    </div>
-</footer>
+        <section id="panel-mensagem" class="panel">
+            <div class="form-group">
+                <label for="texto_resultado">Texto encriptado/descriptografado:</label>
+                <textarea id="texto_resultado" class="texto_resultado" name="texto_resultado" rows="4" cols="50" readonly></textarea>
+            </div>
+            <div class="botoes">
+                <button id="btnCopiar" class="btn btn-copiar" type="button">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h2 class="nome">Luiz Augusto Miranda de Lima</h2>
+            <a href="https://www.linkedin.com/in/luiz-augusto-449a96270/" class="linkedin" target="_blank">Linkedin</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
